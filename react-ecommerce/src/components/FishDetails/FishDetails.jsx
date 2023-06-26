@@ -2,10 +2,10 @@
 
 import { useParams, useNavigate } from "react-router-dom";
 
-export default function FishDetails({ plants, handleAddToCart }) {
+export default function FishDetails({ fishies, handleAddToCart }) {
   const { plantName } = useParams();
   const navigate = useNavigate();
-  const plant = plants.find((plant) => plant.name === plantName);
+  const plant = fishies.find((plant) => plant.name === plantName);
 
   const addToCart = () => {
     handleAddToCart(plant);

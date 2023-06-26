@@ -9,7 +9,7 @@ import NotFound from "./components/NotFound/NotFound";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
-  const plants = [
+  const fishies = [
     {
       name: "Cobalt Discus",
       scientificName: "	3.5 Inches",
@@ -73,7 +73,7 @@ function App() {
       description:
         "These Black German Rams have a deep black body with red fins. Perfect tank mates for your discus or community tank.",
       lighting:
-        "Snake plant can adapt to a range of lighting conditions but prefer bright, indirect light. They can tolerate low light levels, but prolonged exposure to low light may result in slower growth and less vibrant leaf coloration. Avoid placing them in direct sunlight, as it can scorch the leaves.",
+        "10,00K White",
       temperature: "82-86 F",
       price: 20.0,
     },
@@ -114,11 +114,14 @@ function App() {
         </nav>
         <Routes>
           <Route exact path="/" Component={Home} />
-          <Route path="/products" element={<Products plants={plants} />} />
+          <Route path="/products" element={<Products fishies={fishies} />} />
           <Route
             path="/products/:plantName"
             element={
-              <FishDetails plants={plants} handleAddToCart={handleAddToCart} />
+              <FishDetails
+                fishies={fishies}
+                handleAddToCart={handleAddToCart}
+              />
             }
           />
           <Route path="/info" Component={Info} />

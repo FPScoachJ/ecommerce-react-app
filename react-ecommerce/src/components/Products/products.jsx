@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-export default function Products({ plants }) {
+export default function Products({ fishies }) {
   return (
     <div className="product-card-container">
-      {plants.map((plant) => (
+      {fishies.map((plant) => (
         <div className="product-card" key={plant.name}>
           <h2>{plant.name}</h2>
           <h3>{plant.scientificName}</h3>
