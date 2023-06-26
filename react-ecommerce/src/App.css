@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  background-color: #723636;
+  background-color: #ff6f00;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -35,7 +35,7 @@
   justify-content: space-between;
   padding-top: 5rem;
   text-align: center;
-  color: #7bff98;
+  color: black;
 }
 
 .product-card {
@@ -70,7 +70,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #ff0000;
+  background-color: black;
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -102,5 +103,5 @@ nav {
 nav a {
   margin-right: 1rem; /* Add some spacing between navigation items */
   text-decoration: none;
-  color: #7bff98;
+  color: black;
 }

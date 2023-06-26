@@ -10,8 +10,8 @@ export default function Products({ fishies }) {
           <h3>{fish.scientificName}</h3>
           <img src={fish.image} alt={fish.name} />
 
-          <button>
-            <Link to={`/products/${fish.name}`}> more info </Link>
+          <button className="fishybutton">
+            <Link to={`/products/${fish.name}`}> Details </Link>
           </button>
         </div>
       ))}

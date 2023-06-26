@@ -108,6 +108,7 @@ function App() {
           <h3>Discus Emporium</h3>
           <Link to="/">Home</Link>
           <Link to="/products">Fish</Link>
+          <Link to="/info">Info</Link>
           <Link to="/cart">Cart</Link>
         </nav>
         <Routes>
