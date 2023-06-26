@@ -16,7 +16,7 @@ function App() {
       image:
         "https://wattleydiscus.com/wp-content/uploads/2016/02/high-body-cobalt-wattley-discus.jpg",
       description:
-        "Like the goblins which gave their name to the metal for which this plant is named, Cobalt Discus are ghastly creatures; with their pallid blue skin fading to blushes of scarlet, and blazing red eyes, perfect for staring through the glass at you as you watch them.",
+        "Like the goblins which gave their name to the metal for which this fish is named, Cobalt Discus are ghastly creatures; with their pallid blue skin fading to blushes of scarlet, and blazing red eyes, perfect for staring through the glass at you as you watch them.",
       lighting: "10,000K White",
       temperature: "82-86 F",
       price: 60.0,
@@ -25,7 +25,7 @@ function App() {
       name: "Red Melon Discus",
       scientificName: "3 Inches",
       image:
-        "https://wattleydiscus.com/wp-content/uploads/2016/02/Red-Melon-in-planted-tank-wattley-discus.jpg",
+        "https://c2n5z4u4.stackpathcdn.com/wp-content/uploads/2016/02/Red-Melon-in-planted-tank-wattley-discus.jpg",
       description:
         "These fiery red and yellow Red Melons Discus will add a inimitable glow to your collection.",
       lighting: "10,000K White",
@@ -72,34 +72,33 @@ function App() {
         "https://c2n5z4u4.stackpathcdn.com/wp-content/uploads/2020/04/black-german-ram-wattley-discus.jpg",
       description:
         "These Black German Rams have a deep black body with red fins. Perfect tank mates for your discus or community tank.",
-      lighting:
-        "10,00K White",
+      lighting: "10,00K White",
       temperature: "82-86 F",
       price: 20.0,
     },
   ];
   const [cart, setCart] = useState([]);
-  // takes a plant object as a parameter
-  const handleAddToCart = (plant) => {
-    //This line checks if the plant already exists in the cart array
-    //find() method to search for an item in the cart array that has the same name as the plant being added.
-    const plantInCart = cart.find((item) => item.name === plant.name);
-    //checks if the plant is already present in the cart
-    if (plantInCart) {
+  // takes a fish object as a parameter
+  const handleAddToCart = (fish) => {
+    //This line checks if the fish already exists in the cart array
+    //find() method to search for an item in the cart array that has the same name as the fish being added.
+    const fishInCart = cart.find((item) => item.name === fish.name);
+    //checks if the fish is already present in the cart
+    if (fishInCart) {
       //creates an updated version of the cart array by mapping over each item in the cart array
-      // and increasing the quantity of the matching plant by 1.
+      // and increasing the quantity of the matching fish by 1.
       const updatedCart = cart.map((item) => {
-        if (item.name === plant.name) {
+        if (item.name === fish.name) {
           return { ...item, quantity: item.quantity + 1 };
         }
         return item;
       });
       setCart(updatedCart);
-      //If the plant is not in the cart this else block is executed
+      //If the fish is not in the cart this else block is executed
     } else {
       //adds a new item to the cart array by spreading the  cart array and
-      // adding a new  plant with a quantity of 1 ({ ...plant, quantity: 1 }).
-      setCart([...cart, { ...plant, quantity: 1 }]);
+      // adding a new  fish with a quantity of 1 ({ ...fish, quantity: 1 }).
+      setCart([...cart, { ...fish, quantity: 1 }]);
     }
   };
   return (
@@ -109,14 +108,13 @@ function App() {
           <h3>Discus Emporium</h3>
           <Link to="/">Home</Link>
           <Link to="/products">Fish</Link>
-          <Link to="/info">Info</Link>
           <Link to="/cart">Cart</Link>
         </nav>
         <Routes>
           <Route exact path="/" Component={Home} />
           <Route path="/products" element={<Products fishies={fishies} />} />
           <Route
-            path="/products/:plantName"
+            path="/products/:fishName"
             element={
               <FishDetails
                 fishies={fishies}
