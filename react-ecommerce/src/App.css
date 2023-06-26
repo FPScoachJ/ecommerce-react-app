@@ -12,7 +12,7 @@
   -webkit-text-size-adjust: 100%;
 }
 .home-page {
-  background-image: url("https://hips.hearstapps.com/hmg-prod/images/plant-guide-1663941701.jpg");
+  background-image: url("https://www.aquariadise.com/wp-content/uploads/2021/07/Discus-Fish-1024x682.webp");
 
   background-size: cover;
   background-position: center center; /* Adjusted background position */
@@ -26,7 +26,7 @@
   color: white;
 }
 .shopButton {
-  background-color: #f6cfb2;
+  background-color: #ff6f00;
   color: #2c4a4c;
 }
 .product-card-container {
@@ -35,7 +35,7 @@
   justify-content: space-between;
   padding-top: 5rem;
   text-align: center;
-  color: #224229;
+  color: #7bff98;
 }
 
 .product-card {
@@ -92,7 +92,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: #f6cfb2;
+  background-color: #ff6f00;
   font-weight: bold;
 
   /* Add a background color for better readability */
@@ -102,5 +102,5 @@ nav {
 nav a {
   margin-right: 1rem; /* Add some spacing between navigation items */
   text-decoration: none;
-  color: #2c4a4c;
+  color: #7bff98;
 }
